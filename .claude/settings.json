@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [{
+          "type": "command",
+          "command": "python3 .claude/hooks/validate-completeness.py",
+          "timeout": 5000
+        }]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [{
+          "type": "command",
+          "command": "python3 .claude/hooks/validate-completeness.py",
+          "timeout": 5000
+        }]
+      }
+    ]
+  }
+}
